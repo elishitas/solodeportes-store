@@ -1,7 +1,6 @@
 
 import SearchIcon from '@material-ui/icons/Search';
 const NavSearch = () => {
-
     return ( 
         <nav>
           <div className="App-search-bar">

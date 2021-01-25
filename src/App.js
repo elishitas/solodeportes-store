@@ -1,10 +1,10 @@
-import Header from './components/header'
+import Header from './components/header' //importar el nombre de nuestro componente from -posicion-
 import './App.css';
 
-function App() {
+function App() {//app es el padre de header
   return (
     <>
-      <Header />
+      <Header /> {/*llamo a ese componente que dentro tiene mini componentes, html -> jsx mayusc*/}
     </>
   );
 }
