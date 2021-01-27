@@ -1,24 +1,28 @@
 import styled from "styled-components";
 
 const NavSections = () => {
+    const categories = [
+      { name: "Hombre" },
+      { name: "Mujer" },
+      { name: "Nene" },
+      { name: "Nena" },
+      { name: "Bebes" },
+      { name: "Marcas" },
+      { name: "Clubes" },
+      { name: "Deportes" },
+      { name: "Accesorios" },
+      { name: "Oferta" },
+      { name: "Verano" },
+    ]
     return ( 
-        <Nav>
-          <NavContainer>
-              <p style={linkStyle}>Hombre</p>
-              <p style={linkStyle}>Mujer</p>
-              <p style={linkStyle}>Nene</p>
-              <p style={linkStyle}>Nena</p>
-              <p style={linkStyle}>Bebes</p>
-              <p style={linkStyle}>Marcas</p>
-              <p style={linkStyle}>Clubes</p>
-              <p style={linkStyle}>Deportes</p>
-              <p style={linkStyle}>Accesorios</p>
-              <p style={linkStyle}>Oferta</p>
-              <p style={linkStyle}>Verano</p>
-          </NavContainer>
-        </Nav>
-     );
-
+      <Nav>
+        <NavContainer>
+          {categories.map((category, index)=> {
+            return <p style={linkStyle} key={index}>{category.name}</p>
+          })}
+        </NavContainer>
+      </Nav>
+   );
 }
 export default NavSections;
 
