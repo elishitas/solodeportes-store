@@ -21,12 +21,21 @@ const products = [
     },
 ];
 
-const ItemListContainer = () => {
+const ItemListContainer = (props) => {
+
+    const { title } = props; //Esto es destructuracion ES6, clase 25/01
     return (
-        products.map( (product) => 
-            <Item product={product} />
-        )
+        <>
+            <h1>{title}</h1>
+            {products.map( (product, index) => 
+                <Item
+                    key={index} 
+                    product={product} 
+                />
+            )}
+        </>
     );
 }
+
 
 export default ItemListContainer;
